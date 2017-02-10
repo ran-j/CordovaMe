@@ -33,7 +33,7 @@ Partial Class DeletarProjeto
         '
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(64, 114)
+        Me.Button1.Location = New System.Drawing.Point(15, 74)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(121, 65)
         Me.Button1.TabIndex = 0
@@ -44,9 +44,9 @@ Partial Class DeletarProjeto
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(64, 61)
+        Me.Button2.Location = New System.Drawing.Point(188, 74)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(121, 42)
+        Me.Button2.Size = New System.Drawing.Size(121, 65)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Procurar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -55,7 +55,7 @@ Partial Class DeletarProjeto
         '
         Me.TextBox1.Location = New System.Drawing.Point(15, 35)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(228, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(294, 20)
         Me.TextBox1.TabIndex = 2
         '
         'Label1
@@ -67,18 +67,18 @@ Partial Class DeletarProjeto
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Pasta do Projeto"
         '
-        'Form3
+        'DeletarProjeto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(255, 191)
+        Me.ClientSize = New System.Drawing.Size(321, 151)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Name = "Form3"
+        Me.Name = "DeletarProjeto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Deletar Projeto"
         Me.ResumeLayout(False)

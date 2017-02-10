@@ -34,7 +34,7 @@ Partial Class CriarBuild
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(207, 78)
+        Me.Button1.Location = New System.Drawing.Point(291, 51)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(90, 32)
         Me.Button1.TabIndex = 0
@@ -44,7 +44,7 @@ Partial Class CriarBuild
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 26)
+        Me.Label2.Location = New System.Drawing.Point(15, 61)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(108, 13)
         Me.Label2.TabIndex = 7
@@ -54,14 +54,14 @@ Partial Class CriarBuild
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Android"})
-        Me.ComboBox1.Location = New System.Drawing.Point(126, 23)
+        Me.ComboBox1.Location = New System.Drawing.Point(129, 58)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(156, 21)
         Me.ComboBox1.TabIndex = 6
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(126, 49)
+        Me.TextBox1.Location = New System.Drawing.Point(126, 22)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(267, 20)
         Me.TextBox1.TabIndex = 8
@@ -69,7 +69,7 @@ Partial Class CriarBuild
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 52)
+        Me.Label1.Location = New System.Drawing.Point(12, 25)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(111, 13)
         Me.Label1.TabIndex = 10
@@ -77,7 +77,7 @@ Partial Class CriarBuild
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(399, 49)
+        Me.Button2.Location = New System.Drawing.Point(399, 22)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 20)
         Me.Button2.TabIndex = 12
@@ -86,7 +86,7 @@ Partial Class CriarBuild
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(303, 78)
+        Me.Button3.Location = New System.Drawing.Point(384, 51)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 32)
         Me.Button3.TabIndex = 13
@@ -98,7 +98,7 @@ Partial Class CriarBuild
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(482, 119)
+        Me.ClientSize = New System.Drawing.Size(482, 97)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label1)

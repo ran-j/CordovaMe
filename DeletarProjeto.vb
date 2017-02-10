@@ -14,8 +14,9 @@ Public Class DeletarProjeto
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        If TextBox1.Text.Length > 3 Then
+        If Not Directory.Exists(TextBox1.Text) Then
+            MsgBox("Essa pasta não existe")
+        ElseIf TextBox1.Text.Length > 3 Then
             Dim choice As DialogResult = MessageBox.Show("Deseja realmente excluir esse projeto", "Excluir ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 
             If choice = Windows.Forms.DialogResult.Yes Then

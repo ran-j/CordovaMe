@@ -24,8 +24,9 @@ Public Class Emular
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         oluigar = TextBox1.Text
-
-        If Directory.Exists(oluigar + "\platforms\android") And File.Exists(oluigar + "\platforms\platforms.json") Then
+        If Not Directory.Exists(TextBox1.Text) Then
+            MsgBox("Essa pasta não existe")
+        ElseIf Directory.Exists(oluigar + "\platforms\android") And File.Exists(oluigar + "\platforms\platforms.json") Then
             If oluigar.Length > 3 Then
                 Try
                     My.Settings.lugarsalvo = oluigar
@@ -42,10 +43,10 @@ Public Class Emular
 
                 End Try
 
-            ElseIf Not Directory.Exists(oluigar + "\www") Or Not File.Exists(oluigar + "\config.xml") Or Not File.Exists(oluigar + "\index.html") Then
-                MsgBox("Essa pasta não contem um projeto Cordova")
+            ElseIf Directory.Exists(oluigar + "\www") Or File.Exists(oluigar + "\config.xml") Or File.Exists(oluigar + "\index.html") Then
+                MsgBox("Caminho inválido")
             Else
-                MsgBox("Caminho Invalido")
+                MsgBox("Essa pasta não contem um projeto Cordova")
             End If
         Else
             MsgBox("O projeto está sem plataforma")

@@ -33,7 +33,7 @@ Partial Class CriarProjeto
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(380, 62)
+        Me.Button1.Location = New System.Drawing.Point(380, 61)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(57, 20)
         Me.Button1.TabIndex = 0
@@ -58,9 +58,9 @@ Partial Class CriarProjeto
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(159, 96)
+        Me.Button2.Location = New System.Drawing.Point(161, 88)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(128, 34)
+        Me.Button2.Size = New System.Drawing.Size(128, 42)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Criar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -83,7 +83,7 @@ Partial Class CriarProjeto
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Local para Salvar"
         '
-        'Form2
+        'CriarProjeto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -98,7 +98,7 @@ Partial Class CriarProjeto
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "Form2"
+        Me.Name = "CriarProjeto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Criar Projeto"
         Me.ResumeLayout(False)

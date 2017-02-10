@@ -35,27 +35,34 @@ Public Class AddPlugin
             My.Settings.lugarsalvo = TextBox1.Text
         End If
 
-        If olugar.Length < 3 Then
-            MsgBox("Selecione o caminho do projeto")
-        ElseIf (ComboBox1.SelectedIndex = -1) Then
-            MsgBox("Selecione o plugin para adicionar")
-        Else
-            If ComboBox1.SelectedItem.Equals("Camera") Then
-                addplugin("camera")
-            ElseIf ComboBox1.SelectedItem.Equals("Diagnostic") Then
-                addplugin("cordova.plugins.diagnostic")
-            ElseIf ComboBox1.SelectedItem.Equals("Geolocation") Then
-                addplugin("cordova-plugin-geolocation")
-            ElseIf ComboBox1.SelectedItem.Equals("Dialogs") Then
-                addplugin("cordova-plugin-dialogs")
-            ElseIf ComboBox1.SelectedItem.Equals("Bluetooth Serial") Then
-                addplugin("cordova-plugin-bluetooth-serial")
-            ElseIf ComboBox1.SelectedItem.Equals("Background Mode") Then
-                addplugin("cordova-plugin-background-mode")
-            ElseIf ComboBox1.SelectedItem.Equals("Network Information") Then
-                addplugin("cordova-plugin-network-information")
+        If Not Directory.Exists(TextBox1.Text) Then
+            MsgBox("Essa pasta não existe")
+        ElseIf Directory.Exists(olugar + "\www") Or File.Exists(olugar + "\config.xml") Or File.Exists(olugar + "\index.html") Then
 
+            If olugar.Length < 3 Then
+                MsgBox("Selecione o caminho do projeto")
+            ElseIf (ComboBox1.SelectedIndex = -1) Then
+                MsgBox("Selecione o plugin para adicionar")
+            Else
+                If ComboBox1.SelectedItem.Equals("Camera") Then
+                    addplugin("camera")
+                ElseIf ComboBox1.SelectedItem.Equals("Diagnostic") Then
+                    addplugin("cordova.plugins.diagnostic")
+                ElseIf ComboBox1.SelectedItem.Equals("Geolocation") Then
+                    addplugin("cordova-plugin-geolocation")
+                ElseIf ComboBox1.SelectedItem.Equals("Dialogs") Then
+                    addplugin("cordova-plugin-dialogs")
+                ElseIf ComboBox1.SelectedItem.Equals("Bluetooth Serial") Then
+                    addplugin("cordova-plugin-bluetooth-serial")
+                ElseIf ComboBox1.SelectedItem.Equals("Background Mode") Then
+                    addplugin("cordova-plugin-background-mode")
+                ElseIf ComboBox1.SelectedItem.Equals("Network Information") Then
+                    addplugin("cordova-plugin-network-information")
+
+                End If
             End If
+        Else
+            MsgBox("Essa pasta não contem um projeto Cordova")
         End If
     End Sub
 
@@ -107,4 +114,25 @@ Public Class AddPlugin
         My.Computer.FileSystem.DeleteFile(Path.GetTempPath() + "\criar.bat")
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If Not Directory.Exists(TextBox1.Text + "\www") Then
+            MsgBox("Essa pasta não existe")
+        Else
+            If Directory.Exists(TextBox1.Text + "\www") Or File.Exists(TextBox1.Text + "\config.xml") Or File.Exists(TextBox1.Text + "\index.html") Then
+
+                Dim SW As New StreamWriter(Path.GetTempPath() + "\criar.bat")
+                SW.WriteLine("title CordovaME&start cd " + TextBox1.Text)
+                SW.Close()
+                SW.Dispose()
+
+                Dim proc As New Process()
+
+                proc.StartInfo.FileName = Path.GetTempPath() + "\criar.bat"
+                proc.Start()
+                Gobala.caminho = olugar
+            Else
+                MsgBox("Essa pasta não é um projeto Cordova")
+            End If
+        End If
+    End Sub
 End Class

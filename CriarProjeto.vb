@@ -96,10 +96,10 @@ Public Class CriarProjeto
         Next
 
         If saida = 1 Then
-            MsgBox("Aplicativo criado")
+            MsgBox("Projeto criado")
             abrirpasta()
         Else
-            MsgBox("Erro ao criar app")
+            MsgBox("Erro ao criar o projeto")
         End If
 
 
@@ -108,5 +108,9 @@ Public Class CriarProjeto
         My.Computer.FileSystem.DeleteFile(Path.GetTempPath() + "\criar.bat")
         My.Computer.FileSystem.DeleteFile(caminho + "\outp.cord")
 
+    End Sub
+
+    Private Sub TextBox1_Leave(sender As Object, e As EventArgs) Handles TextBox1.Leave
+        TextBox1.Text = TextBox1.Text.Replace(" ", "-")
     End Sub
 End Class

@@ -29,13 +29,14 @@ Partial Class AddPlugin
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(221, 76)
+        Me.Button1.Location = New System.Drawing.Point(324, 49)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(96, 42)
+        Me.Button1.Size = New System.Drawing.Size(75, 42)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Adicionar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -43,7 +44,7 @@ Partial Class AddPlugin
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 49)
+        Me.Label2.Location = New System.Drawing.Point(13, 64)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(106, 13)
         Me.Label2.TabIndex = 2
@@ -60,7 +61,7 @@ Partial Class AddPlugin
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Camera", "Diagnostic", "Geolocation", "Dialogs", "Bluetooth Serial", "Background Mode", "Network Information"})
-        Me.ComboBox1.Location = New System.Drawing.Point(125, 49)
+        Me.ComboBox1.Location = New System.Drawing.Point(126, 61)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(192, 21)
         Me.ComboBox1.TabIndex = 4
@@ -83,12 +84,22 @@ Partial Class AddPlugin
         Me.Button2.Text = "Procurar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(405, 49)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(96, 42)
+        Me.Button3.TabIndex = 8
+        Me.Button3.Text = "Abrir CMD"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'AddPlugin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(508, 129)
+        Me.ClientSize = New System.Drawing.Size(508, 103)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ComboBox1)
@@ -112,4 +123,5 @@ Partial Class AddPlugin
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

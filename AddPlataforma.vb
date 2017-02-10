@@ -11,7 +11,9 @@ Public Class AddPlataforma
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If TextBox1.Text.Length < 3 Then
+        If Not Directory.Exists(TextBox1.Text) Then
+            MsgBox("Essa pasta não existe")
+        ElseIf TextBox1.Text.Length < 3 Then
             MsgBox("Selecione o caminho do projeto")
         ElseIf (ComboBox1.SelectedIndex = -1) Then
             MsgBox("Selecione a plataforma para adicionar")

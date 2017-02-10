@@ -26,7 +26,9 @@ Public Class CriarBuild
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If TextBox1.Text.Length < 3 Then
+        If Not Directory.Exists(TextBox1.Text) Then
+            MsgBox("Essa pasta não existe")
+        ElseIf TextBox1.Text.Length < 3 Then
             MsgBox("Pasta inválida")
         ElseIf (ComboBox1.SelectedIndex = -1) Then
             MsgBox("Selecione a plataforma para adicionar")
@@ -134,7 +136,9 @@ Public Class CriarBuild
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If TextBox1.Text.Length < 3 Then
+        If Not Directory.Exists(TextBox1.Text) Then
+            MsgBox("Essa pasta não existe")
+        ElseIf TextBox1.Text.Length < 3 Then
             MsgBox("Selecione o projeto")
         Else
             olugar = TextBox1.Text
