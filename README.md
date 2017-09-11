@@ -1,4 +1,4 @@
-# CorodvaMe
+# CorodvaMe (Descontinuado)
 
 Utilitário para ajudar no gerenciamento de projetos em cordova.
 
